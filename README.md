@@ -183,10 +183,10 @@ db.produtos_estoque_A.updateOne(
 <p>Com isso, encerramos o processo de fazer esse agrupamento pelo Apache Hop. Caso queira adicionar mais filiais, basta adicionar mais uma ação de "MongoDB Input" e ligá-la à ação "Concat Field".Isso e uma das diversas funções presentes no Apache Hop</p>
 
 <h2>Apache Spark</h2>
-<p>Irei mostrar o mesmo procedimento, mas utilizando dessa vez o Apache Spark</p>
+<p>Agora vamos realizar o mesmo procedimento usando Apache Spark.</p>
 
 <h4>Iniciando o Serviço Spark</h4>
-<p>Nesse caso salvei um CSV do "vicentin_filial_D"</p>
+<p>Vamos começar importando o SparkSession e carregando o CSV da "vicentin_filial_D".</p>
 
 ```python
 import findspark
@@ -205,10 +205,9 @@ df.show(truncate=False)
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/bf185b69-28e5-4afc-b6ba-97e8ab34566e" alt="img32">
 </p>
 <h4>Importando Bibliotecas</h4>
-<p>Irei importar as bibliotecas que irei utilizar para as consultas</p>
+<p>Vamos importar as bibliotecas necessárias para as consultas.</p>
 
 ```python
-#Importar as bibliotecas necessarias
 from pyspark.sql.functions import count, col, asc, desc, sum, year, month
 ```
 <h4>Verificando o Schema da tabela</h4>
@@ -219,52 +218,39 @@ df.printSchema()
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/c4809764-b2a2-4e30-96be-4d420ca6feed" alt="img33">
 </p>
-<p>Com esse comando podemos ver como está estruturado a tabela, se a tabela é uma string, se é um valor inteiro ou algo do tipo</p>
+<p>Podemos visualizar a estrutura da tabela e os tipos de dados de cada coluna.</p>
+<h4>Filtrando apenas as colunas desejadas</h4>
+<p>Vamos criar um DataFrame selecionando apenas as colunas "nome", "quantidade" e "preco_compra".</p>
 
-<h4>Dataframe filtrando apenas as tabelas selecionadas</h4>
-<p>No caso desse Dataframe eu quero que retorne apenas o Nome, Quantidade e Preço de Compra</p>
-  
 ```python
-#Criar um Dataframe buscando apenas o Nome, Quantidade e Preço Compra
 df_quantidade_produtos = df.select('nome', 'quantidade', 'preco_compra')
 df_quantidade_produtos.show(truncate=False)
 ```
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/177a4fb0-14a5-41cb-ad39-92fd551d8233" alt="img34">
 </p>
-
-<h4>Dataframe que Soma os Produtos e Quantidade</h4>
-<p>Vamos fazer parecido com o que foi feito no Apache Hop, agrupando os nomes do produtos e somando a sua quantidade</p>
+<h4>Dataframe com a soma dos produtos e suas quantidades</h4>
+<p>Vamos agrupar os produtos pelo nome e somar as quantidades.</p>
 
 ```python
-#Criando um Dataframe, separando os produtos e a quantidade deles, realizando a soma total da quantidade de cada produto
 df_soma = df_quantidade_produtos.groupBy('nome').sum('quantidade').orderBy(col('sum(quantidade)').desc())
 df_soma.show(1000, truncate=False)
 ```
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/53e20b73-bde9-4048-95f5-70def52a0d9d" alt="img35">
 </p>
-<p>Já esta retornando a soma dos produtos e da sua quantidade, exatamente igual ao do Apache Hop antes de atualizar o valor, por aqui ser o dado se forma estatica via CSV, eu teria que atualizar o arquivo CSV para os valores serem alterados</p>
-
-<h4>Somando toda a quantidade de produtos</h4>
-<p>Vamos somar todos os produtos do banco e verificar a quantidade total</p>
+<h4>Somando a quantidade total de produtos</h4>
+<p>Vamos calcular a quantidade total de produtos em estoque.</p>
 
 ```python
-#Soma total de produtos
-df_soma_total = df_soma.groupBy('sum(quantidade)').count()
-df_soma_total = df_soma_total.agg(sum('sum(quantidade)').alias('Quantidade total de Produtos em Estoque'))
+df_soma_total = df_soma.groupBy().sum('sum(quantidade)').alias('Quantidade total de Produtos em Estoque')
 df_soma_total.show(truncate=False)
 ```
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/4489ba68-5ec1-46ba-a130-1b90a08f6075" alt="img36">
 </p>
-
-<h4>Criando mais duas tabelas chamadas de 'year' e 'month'</h4>
-<p>A ideia dessas tabelas e eu separar a chamada 'data_entrada' por ano e mês, visto que se for verificar como ela está distribuida é dessa forma.</p>
-<p align="center">
-  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/2333a306-cae0-49f0-ac0c-c0653c71abf7" alt="img37">
-</p>
-<p>Sendo dificil realizar consultas com filtros aplicados ao ano ou mês.</p>
+<h4>Criando as colunas 'year' e 'month'</h4>
+<p>Vamos separar a coluna 'data_entrada' por ano e mês para facilitar consultas.</p>
 
 ```python
 df = df.withColumn('month', month(df['data_entrada']))
@@ -272,13 +258,11 @@ df = df.withColumn('year', year(df['data_entrada']))
 df_mes_ano_produto = df.select('nome', 'quantidade', 'preco_compra', 'month', 'year')
 df_mes_ano_produto.show(truncate=False)
 ```
-<p>Apos a criação ficara dessa forma.</p>
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/67f67884-a870-4564-9d37-b35e135749ab" alt="img38">
 </p>
-
-<h4>Agrupando a quantidade total de arquivos por ano</h4>
-<p>Ele vai retornar a quantidade total de produtos que deu entrada e o ano que deu entrada.</p>
+<h4>Agrupando a quantidade total de produtos por ano</h4>
+<p>Vamos agrupar os produtos pelo ano de entrada.</p>
 
 ```python
 df_ano = df.groupBy('year').sum('quantidade').orderBy(col('sum(quantidade)').desc())
@@ -287,8 +271,13 @@ df_ano.show(truncate=False)
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/83abfd2b-f3fd-4d3a-b2ab-c7d784a97194" alt="img39">
 </p>
-<p>So temos produtos cadastrados no ano de 2023 e 2024.</p>
+<p>Só temos produtos cadastrados nos anos de 2023 e 2024. Podemos adicionar o mês na consulta também.</p>
 
-
-
-
+```python
+df_ano = df.groupBy('year','month').sum('quantidade').orderBy(col('sum(quantidade)').desc())
+df_ano.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/c6749bc0-9604-4fb5-bbc3-cb1638466613" alt="img40">
+</p>
+<p>Com isso, concluímos o processo de transformação usando o Spark para visualização dos dados.</p>
