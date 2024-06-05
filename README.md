@@ -33,6 +33,10 @@
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/ebd42879-8298-42cb-b2f2-60029db426c6" alt="img4">
 </p>
+<p>Dessa forma vamos executar a ação e verificar se esta retornando as informações em "View Output".</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/25f6ba2a-03bd-444a-bc81-79a5368a1522" alt="img5">
+</p>
 
 
 
