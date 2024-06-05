@@ -204,6 +204,35 @@ df.show(truncate=False)
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/bf185b69-28e5-4afc-b6ba-97e8ab34566e" alt="img32">
 </p>
+<h4>Importando Bibliotecas</h4>
+
+```python
+#Importar as bibliotecas necessarias
+from pyspark.sql.functions import count, col, asc, desc, sum, year, month
+```
+
+<h4>Verificando o Schema da tabela</h4>
+
+```python
+df.printSchema()
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/c4809764-b2a2-4e30-96be-4d420ca6feed" alt="img33">
+</p>
+<p>Com esse comando podemos ver como está estruturado a tabela, se a tabela é uma string, se é um valor inteiro ou algo do tipo</p>
+
+<h4>Dataframe filtrando apenas as tabelas selecionadas/h4>
+
+```python
+#Criar um Dataframe buscando apenas o Nome, Quantidade e Preço Compra
+df_quantidade_produtos = df.select('nome', 'quantidade', 'preco_compra')
+df_quantidade_produtos.show(truncate=False)
+```
+<p>No caso desse Dataframe eu quero que retorne apenas o Nome, Quantidade e Preço de Compra</p>
+
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/177a4fb0-14a5-41cb-ad39-92fd551d8233" alt="img34">
+</p>
 
 
-
+![image](https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/177a4fb0-14a5-41cb-ad39-92fd551d8233)
