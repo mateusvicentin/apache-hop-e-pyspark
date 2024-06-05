@@ -102,6 +102,14 @@
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/2cebedbb-ad52-47cf-a484-ef4dcac38f55" alt="img19">
 </p>
+<h4>Atualizando a quantidade do produto "Shampoo" e executando o Pipeline novamente.</h4>
+
+```mongosh
+db.produtos_estoque_A.find({nome: "Shampoo"})
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/0fe96945-41a7-42e9-aa1c-1a26c052f10d" alt="img20">
+</p>
 
 
 
