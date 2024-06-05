@@ -94,6 +94,10 @@
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/49a76f8a-8f5b-42b8-9cdd-62ecc3798498" alt="img17">
 </p>
 <p>Configurando a coluna "count" que foi criada quando foi feito o "Group By".</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/5d4b4823-ba4b-4033-8708-cd9dab17fc67" alt="img18">
+</p>
+<p>Então no Database "vicentin_filial_D" e a collection "produtos_estoque_A" o produto "Shampoo" é o que mais tem quantidade.</p>
 
 
 
