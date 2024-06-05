@@ -98,7 +98,10 @@
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/5d4b4823-ba4b-4033-8708-cd9dab17fc67" alt="img18">
 </p>
 <p>Então no Database "vicentin_filial_D" e a collection "produtos_estoque_A" o produto "Shampoo" é o que mais tem quantidade.</p>
-
+<p>O pipeline completo com todas as ações ficará dessa forma.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/5dc7f41b-4e2b-431b-b0ff-3df67200274)" alt="img19">
+</p>
 
 
 
