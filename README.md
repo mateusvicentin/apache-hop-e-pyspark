@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/392ddb53-8aaa-42a9-88cc-c903a0dc9faf" alt="apresentação">
+</p>
+
 <h1 align="center">Acessando arquivos do MongoDB via Apache Hop e Spark</h1>
 
 # Índice 
