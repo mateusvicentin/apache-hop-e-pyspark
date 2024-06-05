@@ -9,13 +9,13 @@
   <li>Ordenar os valores</li>
   <li>Agrupar os valores</li>
 </ul>
-![image]()
+
 
 <h4>Conexão com o banco</h4>
-<p>Vamos procurar pela ação chamada "MongoDB Input" e irei nomeá-la como "conexão_mongo_DB". Para conectá-la com o banco, escolheremos a opção "Create New Metadata Element" e realizaremos a seguinte configuração:</p>
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/04486684-de4d-4ec1-9cbd-026af608f3a0" alt="img7">
 </p>
+<p>Vamos procurar pela ação chamada "MongoDB Input" e irei nomeá-la como "conexão_mongo_DB". Para conectá-la com o banco, escolheremos a opção "Create New Metadata Element" e realizaremos a seguinte configuração:</p>
 <ul>
   <li>Hostname: localhost</li>
   <li>Port: a porta utilizada, no caso é 27018 como foi configurada</li>
