@@ -21,6 +21,23 @@
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/e5888f60-f8c4-4e79-9283-6a0e88c73c1f" alt="img1">
 </p>
 <p>Vamos selecionar qual banco de dados queremos conectar. Eu escolherei o "vicentin_filial_D".</p>
-<p>Em "MongoDB Connection Name", definiremos um nome para salvarmos e selecionarmos facilmente durante a conexão. Usarei o mesmo nome do banco para uma identificação mais fácil.</p>
+<p>Em "MongoDB Connection Name", definiremos um nome para salvarmos e selecionarmos facilmente durante a conexão. Usarei o mesmo nome do banco para uma identificação mais fácil. Ficando então dessa forma.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/48ccc99e-7b7f-4996-bb42-2ee5fd11eb37" alt="img2">
+</p>
+<p>Agora vamos clicar em "Get Collections" para que ele busque as coleções presentes no Database. Ficando dessa forma.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/606d03bd-46fa-465f-85f5-a247818265c3" alt="img3">
+</p>
+<p>Para buscar todos os campos vamos para a opção "Fields" e apos isso em "Get Fields" caso tudo de certo, teremos uma tela parecida com essa.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/ebd42879-8298-42cb-b2f2-60029db426c6" alt="img4">
+</p>
+
+
+
+
+
+
 
 
