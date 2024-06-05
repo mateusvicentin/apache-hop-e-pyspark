@@ -140,6 +140,16 @@ db.produtos_estoque_A.updateOne(
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/e85379d7-61f8-4e43-8a83-742bbe715adb" alt="img24">
 </p>
+<p>Irei configurar o "MongoDB Input" com as informações do "vicentin_filial_E"</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/28fa3413-7654-49f7-a572-f328649fefce" alt="img25">
+</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/277ba7a4-566f-47c9-9073-f0bd37170b35" alt="img25">
+</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/85522947-42c3-48ac-9a3f-2d29a2bcbc36" alt="img26">
+</p>
 
 
 
