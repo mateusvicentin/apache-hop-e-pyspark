@@ -11,7 +11,7 @@
 </ul>
 
 
-<h4>Conexão com o banco</h4>
+<h4>Conexão com o banco MongoDB</h4>
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/04486684-de4d-4ec1-9cbd-026af608f3a0" alt="img7">
 </p>
@@ -46,7 +46,17 @@
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/93c5fae3-9ec5-4d46-b4bb-d7b39ba6a9a6" alt="img6">
 </p>
-<p>A ideia é que ele procure, por exemplo, todos os outros 1,000,000 produtos do banco que contêm o nome "Hortelã" e some o campo "quantidade" com os outros do mesmo nome, e assim para os outros produtos.</p>
+<p>A ideia é que ele procure, por exemplo, todos os outros 1,000,000 produtos do banco que contêm o nome "Hortelã" e some o campo "quantidade" com os outros do mesmo nome, e assim para os outros produtos. Para que isso aconteça iremos escolher a ação chamada "Select Values"</p>
+
+<h4>Selecionar os valores</h4>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/74feb58e-a817-45ca-819f-54347fa2f9d1" alt="img8">
+</p>
+<p>Nesse caso, eu quero selecionar apenas o "nome" e "quantidade" para que os outros valores não interfiram ou de algum problema com a consulta, ficando dessa forma</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/13178574-37b2-4b32-a6b5-3ca79d144e3d" alt="img9">
+</p>
+
 
 
 
