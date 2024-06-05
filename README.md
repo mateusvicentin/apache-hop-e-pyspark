@@ -127,6 +127,8 @@ db.produtos_estoque_A.updateOne(
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/c24fc306-421a-4787-9566-e9442cb48687" alt="img22">
 </p>
+<p>Como adicionamos mais 40 Shampoo no campo quantidade ele aparece esses 40 produtos a mais.</p>
+
 <h4>Log de operações</h4>
 <p>Todo processo tem um Log das operações, que pode ser verificado caso de algum erro.</p>
 <p align="center">
