@@ -205,12 +205,12 @@ df.show(truncate=False)
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/bf185b69-28e5-4afc-b6ba-97e8ab34566e" alt="img32">
 </p>
 <h4>Importando Bibliotecas</h4>
+<p>Irei importar as bibliotecas que irei utilizar para as consultas</p>
 
 ```python
 #Importar as bibliotecas necessarias
 from pyspark.sql.functions import count, col, asc, desc, sum, year, month
 ```
-
 <h4>Verificando o Schema da tabela</h4>
 
 ```python
@@ -222,17 +222,42 @@ df.printSchema()
 <p>Com esse comando podemos ver como está estruturado a tabela, se a tabela é uma string, se é um valor inteiro ou algo do tipo</p>
 
 <h4>Dataframe filtrando apenas as tabelas selecionadas/h4>
-
+<p>No caso desse Dataframe eu quero que retorne apenas o Nome, Quantidade e Preço de Compra</p>
+  
 ```python
 #Criar um Dataframe buscando apenas o Nome, Quantidade e Preço Compra
 df_quantidade_produtos = df.select('nome', 'quantidade', 'preco_compra')
 df_quantidade_produtos.show(truncate=False)
 ```
-<p>No caso desse Dataframe eu quero que retorne apenas o Nome, Quantidade e Preço de Compra</p>
-
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/177a4fb0-14a5-41cb-ad39-92fd551d8233" alt="img34">
 </p>
 
+<h4>Dataframe que Soma os Produtos e Quantidade</h4>
+<p>Vamos fazer parecido com o que foi feito no Apache Hop, agrupando os nomes do produtos e somando a sua quantidade</p>
 
-![image](https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/177a4fb0-14a5-41cb-ad39-92fd551d8233)
+```python
+#Criando um Dataframe, separando os produtos e a quantidade deles, realizando a soma total da quantidade de cada produto
+df_soma = df_quantidade_produtos.groupBy('nome').sum('quantidade').orderBy(col('sum(quantidade)').desc())
+df_soma.show(1000, truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/53e20b73-bde9-4048-95f5-70def52a0d9d" alt="img35">
+</p>
+<p>Já esta retornando a soma dos produtos e da sua quantidade, exatamente igual ao do Apache Hop antes de atualizar o valor, por aqui ser o dado se forma estatica via CSV, eu teria que atualizar o arquivo CSV para os valores serem alterados</p>
+
+<h4>Somando toda a quantidade de produtos</h4>
+<p>Vamos somar todos os produtos do banco e verificar a quantidade total</p>
+
+```python
+#Soma total de produtos
+df_soma_total = df_soma.groupBy('sum(quantidade)').count()
+df_soma_total = df_soma_total.agg(sum('sum(quantidade)').alias('Quantidade total de Produtos em Estoque'))
+df_soma_total.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/4489ba68-5ec1-46ba-a130-1b90a08f6075" alt="img36">
+</p>
+
+
+
