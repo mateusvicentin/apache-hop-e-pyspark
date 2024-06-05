@@ -64,7 +64,23 @@
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/cb714081-9482-4479-83f5-94674477efea" alt="img10">
 </p>
-
+<h4>Ordenar os valores</h4>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/96cf0ab5-f64d-471a-b717-291faf5e107f" alt="img11">
+</p>
+<p>Nessa ação vamos ordernar as duas colunas, vamos ordernar o nome de A a Z, mas não vamos ordernar a quantidade, para que ele apenas ordene a lista toda pelo nome.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/b2a87ead-9a92-4af4-b98c-f7aadf59ed00" alt="img12">
+</p>
+<p>Apos executar novamente a ação vamos consultar o "View Output" dessa ação, lembrado que irá mostrar apenas as 100 primeiras linhas.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/9954002c-32f5-4b81-8776-914dcaae212e" alt="img13">
+</p>
+<p>Para dar continuidade vamos utilizar a ultima ação desse projeto, realizando um Group By dessas duas informações. Para isso iremos utilizar a ação "Group By"</p>
+<h4>Agrupar os valores</h4>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/e5f7ef7c-d118-43b7-ab20-385b95b38612" alt="img14">
+</p>
 
 
 
