@@ -123,6 +123,14 @@ db.produtos_estoque_A.updateOne(
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/a23f5107-8874-43d0-91b1-f1ee3b8e14d2" alt="img21">
 </p>
-
+<p>Vamos executar nossa Pipeline agora e verificar como ficou a consulta final, novamente.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/c24fc306-421a-4787-9566-e9442cb48687" alt="img22">
+</p>
+<h4>Log de operações</h4>
+<p>Todo processo tem um Log das operações, que pode ser verificado caso de algum erro.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/eb7d522a-41a1-4531-b6d6-31105c1f3913" alt="img23">
+</p>
 
 
