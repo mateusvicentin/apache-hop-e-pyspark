@@ -182,3 +182,22 @@ db.produtos_estoque_A.updateOne(
 </ul>
 <p>Com isso, encerramos o processo de fazer esse agrupamento pelo Apache Hop. Caso queira adicionar mais filiais, basta adicionar mais uma ação de "MongoDB Input" e ligá-la à ação "Concat Field".Isso e uma das diversas funções presentes no Apache Hop</p>
 
+<h2>Apache Spark</h2>
+<p>Irei mostrar o mesmo procedimento, mas utilizando dessa vez o Apache Spark</p>
+
+<h4>Iniciando o Serviço Spark</h4>
+<p>Nesse caso salvei um CSV do "vicentin_filial_D"</p>
+
+```python
+import findspark
+findspark.init()
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder\
+        .master('local')\
+        .appName('sparkcollab')\
+        .getOrCreate()
+        
+df = spark.read.csv("C:\\Users\\Vicentin\\Documents\\Estudos\\Dados\\CSV\\vicentin_filial_D.csv", encoding='utf-8', header=True, inferSchema=True, sep=',')
+df.show(truncate=False)
+```
