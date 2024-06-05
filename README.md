@@ -180,4 +180,5 @@ db.produtos_estoque_A.updateOne(
     <li>O processo de ordenação de linhas (SortRows) está agrupando os produtos, resultando em 111 produtos com nomes únicos.</li>
     <li>O processo de ordenação (OrderBy) está retornando esses 111 produtos em ordem decrescente.</li>
 </ul>
-<p>Com isso, encerramos o processo de fazer esse agrupamento pelo Apache Hop. Caso queira adicionar mais filiais, basta adicionar mais uma ação de "MongoDB Input" e ligá-la à ação "Concat Field".</p>
+<p>Com isso, encerramos o processo de fazer esse agrupamento pelo Apache Hop. Caso queira adicionar mais filiais, basta adicionar mais uma ação de "MongoDB Input" e ligá-la à ação "Concat Field".Isso e uma das diversas funções presentes no Apache Hop</p>
+
