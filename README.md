@@ -81,9 +81,19 @@
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/e5f7ef7c-d118-43b7-ab20-385b95b38612" alt="img14">
 </p>
-
-
-
+<p>Agora vamos agrupar pelo nome, realizando uma agregação de quantidade, realizando a soma dos produtos com nomes iguais, ficando dessa forma</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/6dcda093-fb3c-4f30-a609-bfdb9dca96a0" alt="img15">
+</p>
+<p>Apos executar novamente a ação vamos consultar o "View Output" dessa ação</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/f34c3234-f75c-46b9-bc88-df75a511ab0a" alt="img16">
+</p>
+<p>So para melhorar a visualização, vamos utilizar mais um "Sort Rows" para aparecer o produto que mais tem quantidade no estoque.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/49a76f8a-8f5b-42b8-9cdd-62ecc3798498" alt="img17">
+</p>
+<p>Configurando a coluna "count" que foi criada quando foi feito o "Group By".</p>
 
 
 
