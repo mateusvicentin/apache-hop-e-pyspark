@@ -136,6 +136,11 @@ db.produtos_estoque_A.updateOne(
 </p>
 <h2>Concatenando com outro Database</h2>
 <h4>Vamos concatenar com a vicentin_filial_E</h4>
-<p>Para isso, vamos aproveitar o Pipeline anterior e adicionar uma nova ação chamada "Concat Fields".</p>
+<p>Para isso, vamos aproveitar o Pipeline anterior e adicionar uma nova ação chamada "Concat Fields" e utilizar uma outra ação de "MongoDB Input" .</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/e85379d7-61f8-4e43-8a83-742bbe715adb" alt="img24">
+</p>
+
+
 
 
