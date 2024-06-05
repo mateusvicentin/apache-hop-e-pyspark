@@ -221,7 +221,7 @@ df.printSchema()
 </p>
 <p>Com esse comando podemos ver como está estruturado a tabela, se a tabela é uma string, se é um valor inteiro ou algo do tipo</p>
 
-<h4>Dataframe filtrando apenas as tabelas selecionadas/h4>
+<h4>Dataframe filtrando apenas as tabelas selecionadas</h4>
 <p>No caso desse Dataframe eu quero que retorne apenas o Nome, Quantidade e Preço de Compra</p>
   
 ```python
