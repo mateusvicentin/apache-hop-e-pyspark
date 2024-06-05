@@ -201,3 +201,9 @@ spark = SparkSession.builder\
 df = spark.read.csv("C:\\Users\\Vicentin\\Documents\\Estudos\\Dados\\CSV\\vicentin_filial_D.csv", encoding='utf-8', header=True, inferSchema=True, sep=',')
 df.show(truncate=False)
 ```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/bf185b69-28e5-4afc-b6ba-97e8ab34566e" alt="img32">
+</p>
+
+
+
