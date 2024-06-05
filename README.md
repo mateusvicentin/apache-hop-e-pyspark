@@ -11,7 +11,7 @@
 </ul>
 
 <h4>Conexão com o banco</h4>
-<p>Vamos procurar pela ação chamada "MongoDB Input" e irei nomeá-la como "conexão_mongo_DB". Para conectá-la com o banco, escolheremos a opção "Create New Metadata Element" e realizaremos a seguinte configuração:</p>
+<p>Vamos procurar pela ação chamada "MongoDB Input" <img src="(https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/313e242d-562b-466c-a6b2-6db826d1b4e9" alt="img7"> e irei nomeá-la como "conexão_mongo_DB". Para conectá-la com o banco, escolheremos a opção "Create New Metadata Element" e realizaremos a seguinte configuração:</p>
 <ul>
   <li>Hostname: localhost</li>
   <li>Port: a porta utilizada, no caso é 27018 como foi configurada</li>
@@ -43,7 +43,7 @@
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/93c5fae3-9ec5-4d46-b4bb-d7b39ba6a9a6" alt="img6">
 </p>
 <p>A ideia é que ele procure, por exemplo, todos os outros 1,000,000 produtos do banco que contêm o nome "Hortelã" e some o campo "quantidade" com os outros do mesmo nome, e assim para os outros produtos.</p>
-
+<p>A ideia é que ele procure, por exemplo, todos os outros 1,000,000 produtos do banco que contêm o nome "Hortelã" e some o campo "quantidade" com os outros do mesmo nome, e assim para os outros produtos.</p>
 
 
 
