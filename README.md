@@ -162,8 +162,23 @@ db.produtos_estoque_A.updateOne(
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/020e1189-b5d0-4f32-9022-2c228f8c513a" alt="img29">
 </p>
-<p>Apenas essas alterações são feitas, o Pipiline ficará assim agora</p>
-
-
+<p>Apos consultar os dados novamente</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/2f9fb7ec-4dcc-4851-a272-d18e9e730cb6" alt="img30">
+</p>
+<h4>Log de operações</h4>
+<p>O log ficará de seguinte forma agora</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/23cd908e-6285-44a1-8123-2731fe62dde6" alt="img31">
+</p>
+<p>
+<ul>
+    <li>A conexão com o MongoDB da filial D tem 1.000.000 de produtos.</li>
+    <li>A conexão com o MongoDB da filial E tem 1.000.000 de produtos.</li>
+    <li>O processo de concatenação está recebendo esses arquivos e juntando-os em 2.000.000 de registros.</li>
+    <li>O processo de ordenação de linhas (SortRows) está agrupando os produtos, resultando em 111 produtos com nomes únicos.</li>
+    <li>O processo de ordenação (OrderBy) está retornando esses 111 produtos em ordem decrescente.</li>
+</ul>
+</p>
 
 
