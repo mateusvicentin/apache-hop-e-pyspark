@@ -259,5 +259,36 @@ df_soma_total.show(truncate=False)
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/4489ba68-5ec1-46ba-a130-1b90a08f6075" alt="img36">
 </p>
 
+<h4>Criando mais duas tabelas chamadas de 'year' e 'month'</h4>
+<p>A ideia dessas tabelas e eu separar a chamada 'data_entrada' por ano e mês, visto que se for verificar como ela está distribuida é dessa forma.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/2333a306-cae0-49f0-ac0c-c0653c71abf7" alt="img37">
+</p>
+<p>Sendo dificil realizar consultas com filtros aplicados ao ano ou mês.</p>
+
+```python
+df = df.withColumn('month', month(df['data_entrada']))
+df = df.withColumn('year', year(df['data_entrada']))
+df_mes_ano_produto = df.select('nome', 'quantidade', 'preco_compra', 'month', 'year')
+df_mes_ano_produto.show(truncate=False)
+```
+<p>Apos a criação ficara dessa forma.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/67f67884-a870-4564-9d37-b35e135749ab" alt="img38">
+</p>
+
+<h4>Agrupando a quantidade total de arquivos por ano</h4>
+<p>Ele vai retornar a quantidade total de produtos que deu entrada e o ano que deu entrada.</p>
+
+```python
+df_ano = df.groupBy('year').sum('quantidade').orderBy(col('sum(quantidade)').desc())
+df_ano.show(truncate=False)
+```
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/83abfd2b-f3fd-4d3a-b2ab-c7d784a97194" alt="img39">
+</p>
+<p>So temos produtos cadastrados no ano de 2023 e 2024.</p>
+
+
 
 
