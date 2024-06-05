@@ -56,6 +56,18 @@
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/13178574-37b2-4b32-a6b5-3ca79d144e3d" alt="img9">
 </p>
+<p>Apos executar novamente a ação vamos consultar o "View Output" dessa ação</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/de6f553a-27b8-4231-812d-e1e410064c70" alt="img9">
+</p>
+<p>Aqui ele já está retornando apenas o nome e a quantidade de produtos, lembrando que quando a inserção foi feita, vai ter nome repetidos com quantidades diferentes. No exemplo a baixo podemos ter uma noção, ele está mostrando apenas 100 linhas, no codigo total temos 1,000,000 linhas. Então não levem esses numeros de quantidade em consideração.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/cb714081-9482-4479-83f5-94674477efea" alt="img10">
+</p>
+
+
+
+
 
 
 
