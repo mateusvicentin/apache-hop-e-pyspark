@@ -16,6 +16,9 @@
   <li>Hostname: localhost</li>
   <li>Port: a porta utilizada, no caso é 27018 como foi configurada</li>
 </ul>
-<p>E depois disso, selecionaremos "Get Databases" para que ele se conecte ao banco e busque todos os bancos.</p>
+<p>E depois disso, selecionaremos "Get Databases" para que ele se conecte ao banco e busque todos os bancos. Caso esteja tudo certo teremos a seguinte tela.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/e5888f60-f8c4-4e79-9283-6a0e88c73c1f" alt="img1">
+</p>
 
 
