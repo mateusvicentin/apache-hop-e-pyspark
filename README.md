@@ -134,5 +134,8 @@ db.produtos_estoque_A.updateOne(
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/eb7d522a-41a1-4531-b6d6-31105c1f3913" alt="img23">
 </p>
+<h2>Concatenando com outro Database</h2>
+<h4>Vamos concatenar com a vicentin_filial_E</h4>
+<p>Para isso, vamos aproveitar o Pipeline anterior e adicionar uma nova ação chamada "Concat Fields".</p>
 
 
