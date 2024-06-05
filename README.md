@@ -150,7 +150,10 @@ db.produtos_estoque_A.updateOne(
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/85522947-42c3-48ac-9a3f-2d29a2bcbc36" alt="img26">
 </p>
-
+<p>Vamos ligar os dois "MongoDB Input" com o "Concat Fields" ficando dessa forma</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/9abe7054-9e8b-4847-95be-122c940b6641" alt="img27">
+</p>
 
 
 
