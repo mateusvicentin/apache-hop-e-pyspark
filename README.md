@@ -154,6 +154,16 @@ db.produtos_estoque_A.updateOne(
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/9abe7054-9e8b-4847-95be-122c940b6641" alt="img27">
 </p>
+<p>A configuração ficará da seguinte forma</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/b524a640-9e29-450a-a690-f6427eb6f504" alt="img28">
+</p>
+<p>Apenas essas alterações são feitas, o Pipiline ficará assim agora</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/020e1189-b5d0-4f32-9022-2c228f8c513a" alt="img29">
+</p>
+<p>Apenas essas alterações são feitas, o Pipiline ficará assim agora</p>
+
 
 
 
