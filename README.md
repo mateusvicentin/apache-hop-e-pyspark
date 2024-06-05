@@ -37,7 +37,12 @@
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/25f6ba2a-03bd-444a-bc81-79a5368a1522" alt="img5">
 </p>
-
+<p>Ele está lentod um arquivo JSON diretamente do MongoDB, ele está conectado em tempo real com o banco, então caso alguma alteração no banco seja feita, quando for executado a ação ele irá atualizar os valores.</p>
+<p>Nesse exemplo, vamos preparar para que ele some a quantidade total de cada produto, por exemplo. Se a gente for olhar no banco, ele está da seguinte forma:</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/93c5fae3-9ec5-4d46-b4bb-d7b39ba6a9a6" alt="img6">
+</p>
+<p>A ideia é que ele procure, por exemplo, todos os outros 1,000,000 produtos do banco que contêm o nome "Hortelã" e some o campo "quantidade" com os outros do mesmo nome, e assim para os outros produtos.</p>
 
 
 
