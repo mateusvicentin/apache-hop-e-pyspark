@@ -110,7 +110,19 @@ db.produtos_estoque_A.find({nome: "Shampoo"})
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/0fe96945-41a7-42e9-aa1c-1a26c052f10d" alt="img20">
 </p>
+<p>Realizando o Update do produto "Shampoo" como existem muitos produtos com o mesmo nome, eu irei usar o ID para alterar apenas a informação de uma informação. Nesse caso o ID 77939316 
+o mesmo que está na imagem a cima.</p>
 
+```python
+db.produtos_estoque_A.updateOne(
+   { id: 77939316 },
+   { $set: { quantidade: 100 } }
+)
+```
+<p>Apos consultar novamente, o mesmo ID.</p>
+<p align="center">
+  <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/a23f5107-8874-43d0-91b1-f1ee3b8e14d2" alt="img21">
+</p>
 
 
 
