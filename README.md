@@ -11,7 +11,7 @@
 </ul>
 
 <h4>Conexão com o banco</h4>
-<p>Vamos procurar pela ação chamada "MongoDB Input" <img src="(https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/313e242d-562b-466c-a6b2-6db826d1b4e9" alt="img7"> e irei nomeá-la como "conexão_mongo_DB". Para conectá-la com o banco, escolheremos a opção "Create New Metadata Element" e realizaremos a seguinte configuração:</p>
+<p>Vamos procurar pela ação chamada "MongoDB Input" <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/313e242d-562b-466c-a6b2-6db826d1b4e9" alt="img7"> e irei nomeá-la como "conexão_mongo_DB". Para conectá-la com o banco, escolheremos a opção "Create New Metadata Element" e realizaremos a seguinte configuração:</p>
 <ul>
   <li>Hostname: localhost</li>
   <li>Port: a porta utilizada, no caso é 27018 como foi configurada</li>
