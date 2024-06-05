@@ -104,7 +104,7 @@
 </p>
 <h4>Atualizando a quantidade do produto "Shampoo" e executando o Pipeline novamente.</h4>
 
-```mongosh
+```python
 db.produtos_estoque_A.find({nome: "Shampoo"})
 ```
 <p align="center">
