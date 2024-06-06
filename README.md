@@ -288,4 +288,4 @@ df_ano.show(truncate=False)
 <p align="center">
   <img src="https://github.com/mateusvicentin/apache-hop-e-spark/assets/31457038/c6749bc0-9604-4fb5-bbc3-cb1638466613" alt="img40">
 </p>
-<p>Com isso, concluímos o processo de transformação usando o Spark para visualização dos dados.</p>
+<p>Com isso, concluímos o processo de transformação usando o Spark para visualização dos dados.Essa é uma das diversas coisas que podemos fazer com o Spark e com o Hop.</p>
